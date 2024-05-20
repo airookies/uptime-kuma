@@ -665,7 +665,7 @@ class Monitor extends BeanModel {
                     // Make Request
                     let res = await this.makeAxiosRequest(options);
 
-                    bean.msg = `${res.status} - ${res.statusText}`;
+                    bean.msg = "";
                     bean.ping = dayjs().valueOf() - startTime;
 
                     // Check certificate if https is used
