@@ -1142,9 +1142,9 @@ class Monitor extends BeanModel {
                 retries = 0;
             } catch (error) {
                 if (error?.name === "CanceledError") {
-                    bean.msg = `サーバーにアクセスできません / timeout by AbortSignal (${this.timeout}s)`;
+                    bean.msg = `画像アップロードプロセスが停止しました / timeout by AbortSignal (${this.timeout}s)`;
                 } else {
-                    bean.msg = `サーバーにアクセスできません / ${error.message}`;
+                    bean.msg = `画像アップロードプロセスが停止しました / ${error.message}`;
                 }
 
                 // If UP come in here, it must be upside down mode
